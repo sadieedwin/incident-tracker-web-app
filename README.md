@@ -31,53 +31,33 @@ User --> NGINX --> Flask App --> MySQL Database
        Deployed from GitHub Actions --> AWS EC2
 🚀 Getting Started
 🖥️ Local Setup
-Clone the repo
-
-bash
-Copy
-Edit
+1. Clone the repo
 git clone https://github.com/your-username/incident-tracker.git
 cd incident-tracker
-Create a virtual environment
 
-bash
-Copy
-Edit
+2. Create a virtual environment
 python3 -m venv venv
 source venv/bin/activate
-Install dependencies
 
-bash
-Copy
-Edit
+3. Install dependencies
 pip install -r requirements.txt
-Run the app
 
-bash
-Copy
-Edit
+4. Run the app
 python app.py
+
 ☁️ EC2 Deployment (Basic Steps)
-Launch Ubuntu EC2 on AWS
-
-SSH into your instance
-
-Install Python, pip, Git, Flask
-
-Clone your repo
-
-Configure NGINX as reverse proxy
-
-Use systemd to run Flask as a service
-
-Secure with Let’s Encrypt SSL
+- Launch Ubuntu EC2 on AWS
+- SSH into your instance
+- Install Python, pip, Git, Flask
+- Clone your repo
+- Configure NGINX as reverse proxy
+- Use systemd to run Flask as a service
+- Secure with Let’s Encrypt SSL
 
 Detailed instructions coming soon in /docs/server-setup.md
 
 🗃️ Database Schema
-sql
-Copy
-Edit
+
 Table: incidents
 - id (Primary Key)
 - title
@@ -86,48 +66,36 @@ Table: incidents
 - status (Open, Closed)
 - created_at
 - updated_at
+
 🔁 CI/CD with GitHub Actions
 Every push to main triggers:
-
 Linting / basic test
-
 Deployment script (using SSH)
 
 Example workflow file: .github/workflows/deploy.yml
 
 📈 Monitoring
-App logs are stored in /var/log/incident-tracker/
-
-Custom script or Icinga checks availability
-
-Systemd restart policy ensures uptime
+- App logs are stored in /var/log/incident-tracker/
+- Custom script or Icinga checks availability
+- Systemd restart policy ensures uptime
 
 📸 Screenshots
 Coming soon...
 
 📚 What I Learned
-Deploying Flask on a real Linux server
-
-Using NGINX as a reverse proxy
-
-Setting up CI/CD pipelines with GitHub Actions
-
-Managing a web app with systemd
-
-Connecting Python backend to SQL databases
+- Deploying Flask on a real Linux server
+- Using NGINX as a reverse proxy
+- Setting up CI/CD pipelines with GitHub Actions
+- Managing a web app with systemd
+- Connecting Python backend to SQL databases
 
 🧭 Future Improvements
-Dockerize the app
-
-Add user authentication
-
-REST API endpoints
-
-Move DB to AWS RDS
-
-Add alerting/notifications
-
-Build dashboard with incident analytics
+- Dockerize the app
+- Add user authentication
+- REST API endpoints
+- Move DB to AWS RDS
+- Add alerting/notifications
+- Build dashboard with incident analytics
 
 👨‍💻 Author
 Edwin Sadie
