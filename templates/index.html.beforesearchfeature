@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Tracker</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Incident Tracker</h1>
+
+    <div class="form-container">
+        <h2>Report an Incident</h2>
+        <form method="POST">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Submit Incident</button>
+        </form>
+        {% if error_message %}
+            <div style="color: red;">{{ error_message }}</div>
+        {% endif %}
+    </div>
+
+    <div class="incident-history">
+        <h2>Incident History</h2>
+        {% for incident in incidents %}
+            <div class="incident-item">
+                <h3>{{ incident.title }}</h3>
+                <p>{{ incident.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
