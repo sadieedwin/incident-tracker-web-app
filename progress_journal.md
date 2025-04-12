@@ -1,4 +1,32 @@
-Progress Journal - Incident Tracker Web App
+# Progress Journal - Incident Tracker Web App
+
+## ✅ Features
+
+- [x] Report new incident
+- [x] View incidents in table view
+- [x] Card view toggle
+- [x] Search incidents
+- [x] Edit/Delete incidents
+- [ ] User authentication
+- [ ] Email notifications
+
+---
+
+## 🚧 In Progress
+- Adding realistic incident data
+- Testing full feature flow
+
+---
+
+## 📈 Next Steps
+- Enhance sorting functionality
+- Add user authentication
+- Implement email notifications for updates
+
+
+
+
+**Progress Journal - Incident Tracker Web App**
 
 April 09, 2025 - Initial Setup and Basic Structure
 Goal: Start a new Flask web application for tracking incidents.
