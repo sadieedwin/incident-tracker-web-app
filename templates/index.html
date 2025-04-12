@@ -237,6 +237,8 @@
             <h3>{{ incident.title }}</h3>
             <p><strong>Priority:</strong> {{ incident.priority }}</p>
             <p><strong>Systems Affected:</strong> {{ incident.systems_affected }}</p>
+            <p><strong>Resolution:</strong> {{ incident.resolution }}</p>
+            <p><strong>Remarks:</strong> {{ incident.remarks }}</p>
 	    <p><strong>Created:</strong>
     {% if incident.created_at %}
         {{ incident.created_at.strftime('%b %d, %Y %I:%M %p') }}
