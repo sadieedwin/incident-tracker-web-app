@@ -118,3 +118,19 @@ Add more incidents for testing.
 Enhance features: Add more fields and improve sorting functionality.
 
 Consider adding authentication for better security and user management.
+
+
+**April 12, 2025 - Log File Integration for Basic Monitoring**
+- enable logging in the Flask App; updated app.py (/var/log/incident-tracker/incident-tracker.log) - new, updated, and deleted incidents will be logged.
+- enabled logrotate and created a simple log-watcher script.
+
+**Icinga setup**
+- Separate VM for the icinga server(satellite)
+
+  Log Rotation: Created /etc/logrotate.d/incident_tracker to handle log rotation for your incident tracker project.
+
+Log Monitoring: Developed a log-watcher.sh script to monitor log files, specifically tracking events related to create, update, and delete actions.
+
+Icinga Setup: Launched an existing Icinga server for monitoring the incident tracker infrastructure.
+
+Monitoring Configuration: Configured Icinga to monitor system resources such as CPU, memory, and disk space
