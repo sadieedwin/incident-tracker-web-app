@@ -11,10 +11,14 @@
 - [ ] Email notifications
 
 ---
+##  Admin
+- [x] Enabled logging
+- [x] Integrated Icinga monitoring
+
 
 ## 🚧 In Progress
-- Adding realistic incident data
-- Testing full feature flow
+- Finalize Icinga checks
+- 
 
 ---
 
@@ -23,7 +27,7 @@
 - Add user authentication
 - Implement email notifications for updates
 
-**Progress Journal - Incident Tracker Web App**
+**Progress Journal - LOG**
 
 **April 09, 2025 - Initial Setup and Basic Structure**
 Goal: Start a new Flask web application for tracking incidents.
@@ -93,13 +97,7 @@ Implemented routes to handle editing and deleting incidents.
 Goal: Track project progress and share it on GitHub.
 
 Actions:
-
-Created a GitHub repository for the project.
-
-Added an initial README.md file to the repository.
-
 Committed the initial project files (including app.py, templates/, and static/ directories).
-
 Pushed the initial code to GitHub.
 
 **April 12, 2025 - Final Testing**
