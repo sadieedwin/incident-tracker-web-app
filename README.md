@@ -81,8 +81,7 @@ Example workflow file: .github/workflows/deploy.yml
 
 📸 Screenshots
 Coming soon...
-![Uploading image.png…]()
-
+![Incident Tracker](https://github.com/user-attachments/assets/397ee894-9dd6-45a1-9604-6bbcf9cf4831)
 
 
 
