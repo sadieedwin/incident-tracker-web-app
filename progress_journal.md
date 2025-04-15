@@ -11,23 +11,58 @@
 - [ ] Email notifications
 
 ---
-##  Admin
-- [x] Enabled logging
-- [x] Integrated Icinga monitoring
+
+## 🛠️ DevOps / Ops Task List – Incident Tracker Project
+🔍 Monitoring & Alerts
+
+Set up Icinga 2 to monitor:
+- [x] Flask app uptime (via HTTP check)
+- [x] Disk space on the VM
+- [ ] System load or memory usage
+- [ ] SQLite file existence or size
+
+- [ ]Send alerts via email or Slack on critical issues
+
+🔒 Security Hardening
+
+- [ ] Create a dedicated Linux user for running the app
+- [ ] Set up firewall rules (e.g., UFW or iptables)
+- [ ] Enable automatic security updates
+- [ ] Install and configure fail2ban for SSH protection
+
+💾 Backups
+
+- [x] Create a cron job to back up the SQLite database daily
+- [ ] Store backups in a secure directory with proper permissions
+- [ ]     Optionally, upload backups to Amazon S3
+
+🐳 Containerization (Optional but valuable)
+
+- [ ] Create a Dockerfile for the Flask app
+- [ ] Use Docker Compose to manage the app and monitoring tools together
+
+⚙️ Automation & CI/CD
+
+- [ ] Set up a GitHub Actions workflow for automated testing/deployment
+- [ ] Write a simple shell script for deploying updates to the server
+
+📈 Logging & Rotation
+
+- [x] Configure logrotate for application logs
+- [x] Implement basic log monitoring - created a basic script (log_watcher.sh)
+- [ ] Optional: Centralize logs to another server or cloud service
+
+☁️ Cloud Infrastructure Simulation
+
+- [ ] Launch an EC2 instance to host the project in AWS
+- [ ] Use CloudWatch for metrics and alarms
+- [ ] Create and attach an IAM role (for S3, CloudWatch, etc.)
 
 
-## 🚧 In Progress
-- Finalize Icinga checks
-- 
 
----
 
-## 📈 Next Steps
-- Enhance sorting functionality
-- Add user authentication
-- Implement email notifications for updates
 
-**Progress Journal - LOG**
+## **Progress Journal - LOG**
 
 **April 09, 2025 - Initial Setup and Basic Structure**
 Goal: Start a new Flask web application for tracking incidents.
@@ -132,3 +167,8 @@ Log Monitoring: Developed a log-watcher.sh script to monitor log files, specific
 Icinga Setup: Launched an existing Icinga server for monitoring the incident tracker infrastructure.
 
 Monitoring Configuration: Configured Icinga to monitor system resources such as CPU, memory, and disk space
+
+**April 14, 2025**
+- Encountered a problem with delete function, after some time the incidents were being deleted.
+- Fixed by modifying the del route changing from GET to POST method. Fixed the index and styling as well.
+- 
