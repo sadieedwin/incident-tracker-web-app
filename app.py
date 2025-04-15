@@ -65,6 +65,9 @@ def index():
 
     incidents = query.paginate(page=page, per_page=per_page, error_out=False)
 
+    # Total number of incidents
+    total_incidents = Incident.query.count()
+
     return render_template(
         'index.html',
         incidents=incidents.items,
@@ -72,7 +75,8 @@ def index():
         error_message=error_message,
         sort_order=sort_order,
         search_query=search_query,
-        per_page=per_page
+        per_page=per_page,
+        total_incidents=total_incidents
     )
 
 

@@ -11,6 +11,7 @@
     <h1 class="mb-4">Incident Tracker</h1>
 	<a href="{{ url_for('create_incident') }}" class="btn btn-success mb-3">+ Record New Incident</a>
 	<a href="{{ url_for('index') }}" class="btn btn-outline-primary mb-3">🏠 Home</a> 
+    	<p>Total Incidents: {{ total_incidents }}</p>
 
     <form method="get" class="row g-3 mb-3">
         <div class="col-md-4">
@@ -59,7 +60,7 @@
                 <td>{{ incident.systems_affected }}</td>
                 <td>{{ incident.resolution }}</td>
                 <td>{{ incident.root_cause }}</td>
-                <td>{{ incident.created_at.strftime('%Y-%m-%d') }}</td>
+                <td>{{ incident.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
                 <td>
                     <a href="{{ url_for('edit_incident', incident_id=incident.id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ url_for('delete_incident', incident_id=incident.id) }}" method="post" style="display:inline-block;">
