@@ -58,117 +58,152 @@ Set up Icinga 2 to monitor:
 - [ ] Use CloudWatch for metrics and alarms
 - [ ] Create and attach an IAM role (for S3, CloudWatch, etc.)
 
-
-
-
+---
 
 ## **Progress Journal - LOG**
 
-**April 09, 2025 - Initial Setup and Basic Structure**
-Goal: Start a new Flask web application for tracking incidents.
+## 🗓️ April 09, 2025 - Initial Setup and Basic Structure
 
-Actions:
+**🎯 Goal:** Start a new Flask web application for tracking incidents.
 
-Set up the project directory and initialized a Flask app.
+**✅ Actions:**
+- Set up the project directory and initialized a Flask app.
+- Created a basic structure with `app.py` and `templates/` for HTML files.
+- Implemented the main route to render a simple homepage.
+- Set up the SQLite database with a table for incidents (fields like title, description, priority, etc.).
 
-Created a basic structure with app.py and templates/ for HTML files.
+---
 
-Implemented the main route to render a simple homepage.
+## 🗓️ April 10, 2025 - Adding Incident Reporting Functionality
 
-Set up the SQLite database with a table for incidents (fields like title, description, priority, etc.).
+**🎯 Goal:** Enable users to report incidents.
 
-**April 10, 2025 - Adding Incident Reporting Functionality**
-Goal: Enable users to report incidents.
+**✅ Actions:**
+- Created a form for users to report incidents with fields: title, description, priority, systems affected, resolution, and remarks.
+- Implemented POST request handling for form submissions.
+- Displayed success/error messages based on form validation.
 
-Actions:
+---
 
-Created a form for users to report incidents with fields: title, description, priority, systems affected, resolution, and remarks.
+### Adding Search Functionality
 
-Implemented POST request handling for form submissions.
+**🎯 Goal:** Implement search feature to search incidents by title or description.
 
-Displayed success/error messages based on form validation.
+**✅ Actions:**
+- Added a search input field in the UI for filtering incidents.
+- Implemented GET request handling to search the incidents by title and description.
 
-**April 10, 2025 - Adding Search Functionality**
-Goal: Implement search feature to search incidents by title or description.
+---
 
-Actions:
+## 🗓️ April 11, 2025 - Improving UI and Styling
 
-Added a search input field in the UI for filtering incidents.
+**🎯 Goal:** Enhance the visual presentation of the app.
 
-Implemented GET request handling to search the incidents by title and description.
+**✅ Actions:**
+- Styled the app with custom CSS for a more user-friendly experience.
+- Designed two views for incidents: Table view and Card view.
+- Allowed toggling between Table and Card views via buttons.
+- Ensured both views displayed relevant incident details like title, priority, systems affected, and timestamps.
 
-April 11, 2025 - Improving UI and Styling
-Goal: Enhance the visual presentation of the app.
+---
 
-Actions:
+### Date Formatting and Handling Null Values
 
-Styled the app with custom CSS for a more user-friendly experience.
+**🎯 Goal:** Improve incident date display and handle null values gracefully.
 
-Designed two views for incidents: Table view and Card view.
+**✅ Actions:**
+- Used Jinja2 templating to format `created_at` and `updated_at` date fields.
+- Added checks to display "N/A" for incidents with missing date values to prevent errors in the UI.
 
-Allowed toggling between Table and Card views via buttons.
+---
 
-Ensured both views displayed relevant incident details like title, priority, systems affected, and timestamps.
+## 🗓️ April 12, 2025 - Incident Management (Edit/Delete)
 
-**April 11, 2025 - Date Formatting and Handling Null Values**
-Goal: Improve incident date display and handle null values gracefully.
+**🎯 Goal:** Enable incident management actions like editing and deleting incidents.
 
-Actions:
+**✅ Actions:**
+- Created Edit and Delete links for each incident in both Table and Card views.
+- Implemented routes to handle editing and deleting incidents.
 
-Used Jinja2 templating to format created_at and updated_at date fields.
+---
 
-Added checks to display "N/A" for incidents with missing date values to prevent errors in the UI.
+###  GitHub Repository Setup and Initial Commit
 
-**April 12, 2025 - Incident Management (Edit/Delete)**
-Goal: Enable incident management actions like editing and deleting incidents.
+**🎯 Goal:** Track project progress and share it on GitHub.
 
-Actions:
+**✅ Actions:**
+- Committed the initial project files (`app.py`, `templates/`, and `static/` directories).
+- Pushed the initial code to GitHub.
 
-Created Edit and Delete links for each incident in both Table and Card views.
+---
 
-Implemented routes to handle editing and deleting incidents.
+###  Testing
 
-**April 12, 2025 - GitHub Repository Setup and Initial Commit**
-Goal: Track project progress and share it on GitHub.
+**🎯 Goal:** Test the full functionality of the web app.
 
-Actions:
-Committed the initial project files (including app.py, templates/, and static/ directories).
-Pushed the initial code to GitHub.
+**✅ Actions:**
+- Tested adding, editing, deleting, and searching incidents.
+- Verified the toggling between Table and Card views.
+- Confirmed that all buttons and links worked as expected.
 
-**April 12, 2025 - Final Testing**
-Goal: Test the full functionality of the web app.
+**📝 Next Steps:**
+- Add more incidents for testing.
+- Enhance features: Add more fields and improve sorting functionality.
+- Consider adding authentication for better security and user management.
 
-Actions:
-Tested adding, editing, deleting, and searching incidents.
+---
 
-Verified the toggling between Table and Card views.
+### Log File Integration for Basic Monitoring
 
-Confirmed that all buttons and links worked as expected.
+**🎯 Goal:** Enable basic logging and monitoring for the incident tracker app.
 
-Next Steps
-Add more incidents for testing.
+**✅ Actions:**
+- Enabled logging in the Flask App; updated `app.py` to log create, update, and delete events to `/var/log/incident-tracker/incident-tracker.log`.
+- Set up log rotation: Created `/etc/logrotate.d/incident_tracker` to handle log rotation.
+- Developed a `log-watcher.sh` script to monitor log files for important events.
 
-Enhance features: Add more fields and improve sorting functionality.
+---
 
-Consider adding authentication for better security and user management.
+### 🧪 Icinga Monitoring Setup
+
+**🎯 Goal:** Monitor the infrastructure using Icinga.
+
+**✅ Actions:**
+- Used an existing VM as the Icinga monitoring server.
+- Configured log monitoring and system resource checks (CPU, memory, disk space).
+- Connected the Icinga server to monitor the incident tracker project’s EC2 instance.
+
+---
+
+## 🗓️ April 14, 2025 - Bug Fixes and Improvements
+
+**🎯 Goal:** Fix issues and refine behavior of the delete functionality.
+
+**✅ Actions:**
+- Encountered an issue where incidents weren’t deleting properly.
+- Fixed by changing the Delete route to use `POST` method instead of `GET`.
+- Made adjustments to index handling and improved styling.
 
 
-**April 12, 2025 - Log File Integration for Basic Monitoring**
-- enable logging in the Flask App; updated app.py (/var/log/incident-tracker/incident-tracker.log) - new, updated, and deleted incidents will be logged.
-- enabled logrotate and created a simple log-watcher script.
+## ✅ April 15 Progress Update
 
-**Icinga setup**
-- Separate VM for the icinga server(satellite)
+### 🔧 Changes Made
+- **Renamed `remarks` column to `root_cause`** in the database model to better reflect the field's purpose.
+- **Updated all related templates and forms** to use `root_cause` instead of `remarks`.
+- **Modified the edit incident route** in `app.py` to handle the new `root_cause` field.
 
-  Log Rotation: Created /etc/logrotate.d/incident_tracker to handle log rotation for your incident tracker project.
+### 🐛 Issue Encountered
+- Got a `BadRequestKeyError: 'root_cause'` during incident editing.
+  - Cause: The form was missing the `name="root_cause"` input field, leading to a KeyError when trying to access it via `request.form`.
 
-Log Monitoring: Developed a log-watcher.sh script to monitor log files, specifically tracking events related to create, update, and delete actions.
+### ✅ Resolution
+- Added the missing form field in the incident edit template.
+- Retested: edit functionality now works correctly with the new `root_cause` field.
 
-Icinga Setup: Launched an existing Icinga server for monitoring the incident tracker infrastructure.
+### 🧠 Lessons Learned
+- Always double-check that your form inputs match the field names you're accessing in `request.form`.
+- When renaming a column in your model, make sure to update:
+  - Database schema
+  - HTML templates
+  - Flask routes and logic
 
-Monitoring Configuration: Configured Icinga to monitor system resources such as CPU, memory, and disk space
-
-**April 14, 2025**
-- Encountered a problem with delete function, after some time the incidents were being deleted.
-- Fixed by modifying the del route changing from GET to POST method. Fixed the index and styling as well.
-- 
