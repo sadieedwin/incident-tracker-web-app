@@ -81,6 +81,10 @@ Example workflow file: .github/workflows/deploy.yml
 
 📸 Screenshots
 Coming soon...
+![Uploading image.png…]()
+
+
+
 
 📚 What I Learned
 - Deploying Flask on a real Linux server
