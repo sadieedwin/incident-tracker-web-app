@@ -9,6 +9,7 @@
 - [x] Edit/Delete incidents
 - [ ] User authentication
 - [ ] Email notifications
+- [x] Pagination
 
 ---
 
@@ -21,7 +22,7 @@ Set up Icinga 2 to monitor:
 - [ ] System load or memory usage
 - [ ] SQLite file existence or size
 
-- [ ]Send alerts via email or Slack on critical issues
+- [ ] Send alerts via email or Slack on critical issues
 
 🔒 Security Hardening
 
@@ -206,4 +207,8 @@ Set up Icinga 2 to monitor:
   - Database schema
   - HTML templates
   - Flask routes and logic
+
+ ## 📅 April 15, 2025 - Modification
+  - Reorganized and simplified the app to focus on a single table view for clarity and ease of use.
+  - Added pagination
 
