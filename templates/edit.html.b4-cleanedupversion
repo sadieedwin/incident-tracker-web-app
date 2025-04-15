@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Incident</title>
+</head>
+<body>
+    <h1>Edit Incident</h1>
+    <form method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ incident.title }}" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required>{{ incident.description }}</textarea>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="Low" {% if incident.priority == 'Low' %}selected{% endif %}>Low</option>
+            <option value="Medium" {% if incident.priority == 'Medium' %}selected{% endif %}>Medium</option>
+            <option value="High" {% if incident.priority == 'High' %}selected{% endif %}>High</option>
+            <option value="Critical" {% if incident.priority == 'Critical' %}selected{% endif %}>Critical</option>
+        </select>
+
+        <label for="systems_affected">Systems Affected:</label>
+        <input type="text" id="systems_affected" name="systems_affected" value="{{ incident.systems_affected }}">
+
+        <label for="resolution">Resolution:</label>
+        <textarea id="resolution" name="resolution">{{ incident.resolution }}</textarea>
+
+        <label for="root_cause">Root Cause:</label>
+        <textarea id="root_cause" name="root_cause">{{ incident.root_cause }}</textarea>
+
+        <button type="submit">Update Incident</button>
+        <a href="{{ url_for('index') }}">Cancel</a>
+    </form>
+</body>
+</html>
+
