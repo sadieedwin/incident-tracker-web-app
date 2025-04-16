@@ -212,3 +212,11 @@ Set up Icinga 2 to monitor:
   - Reorganized and simplified the app to focus on a single table view for clarity and ease of use.
   - Added pagination
 
+
+## 📅 April 16, 2025 - Some Ops task
+
+- Modified logrotate config.
+- Scheduled Backups with Cron
+- System Management:
+- Created a ~/.ssh/config file due to Connection reset problem.
+- and installed tmux to protect current work
