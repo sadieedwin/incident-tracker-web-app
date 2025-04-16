@@ -157,3 +157,75 @@ sudo apt update && sudo apt upgrade
   - Use SSH keys instead of passwords
   - Change default SSH port
   - Use fail2ban for brute-force protection
+  
+  ---
+## 🔧 Ops Project Progress – Log Rotation, Backups, and Session Management
+
+### 📁 Log Rotation Configuration
+
+I configured **log rotation** for the incident tracker application logs located at `/var/log/incident-tracker/incident_tracker.log`. This helps manage log file size and keeps logs organized.
+
+**Logrotate Config:**
+
+    /var/log/incident-tracker/incident_tracker.log { 
+
+    weekly # Rotate logs weekly 
+    
+    rotate 4 # Keep 4 archived logs 
+    
+    compress # Compress old logs to save space 
+    
+    delaycompress # Delay compression until next rotation 
+    
+    missingok # Ignore if log file is missing 
+    
+    notifempty # Don’t rotate empty logs 
+    
+    create 0640 ubuntu adm # Create new logs with this permission and ownership
+    
+    }
+
+
+✅ Added inline comments for clarity and maintainability.  
+✅ Validated that log rotation will keep the logs under control automatically.
+
+---
+
+### 🗃️ SQLite Database Backup via Cron
+
+To automate **daily backups** of the SQLite database (`incidents.db`), I created a cron job:
+
+0 2 * * * /usr/bin/sqlite3 /home/ubuntu/incident-tracker-web-app/incidents.db .dump > /home/ubuntu/incident-tracker-backups/db-$(date +\%F).sql && find /home/ubuntu/incident-tracker-backups -name "db-*.sql" -type f -mtime +7 -delete
+
+
+- **Runs daily at 2:00 AM**
+- **Backs up the entire DB** into a timestamped SQL dump
+- **Destination:** `/home/ubuntu/backups/`
+- **Note:** Created the directory manually to avoid `No such file or directory` error.
+
+---
+
+### 🔄 Installed `tmux` for Persistent SSH Sessions
+
+To avoid session loss due to SSH disconnects or idle timeouts:
+sudo apt install tmux
+
+Now using `tmux` for safe, resumable work sessions:
+tmux # Start a new session tmux attach # Reconnect to an existing session
+
+
+🔒 Protects long-running tasks and CLI work even if SSH drops.
+
+---
+
+### ✅ Summary of Ops Improvements
+
+- [x] Log rotation implemented and documented  
+- [x] Cron job for SQLite backups in place  
+- [x] `tmux` installed for persistent terminal sessions  
+
+
+
+
+
+
