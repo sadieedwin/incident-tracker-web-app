@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Incident Tracker</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> 
 </head>
 <body>
 <div class="container mt-4">
 
     <h1 class="mb-4">Incident Tracker</h1>
 	<a href="{{ url_for('create_incident') }}" class="btn btn-success mb-3">+ Record New Incident</a>
-	<a href="{{ url_for('index') }}" class="btn btn-outline-primary mb-3">🏠 Home</a> 
+	<a href="{{ url_for('index') }}" class="btn btn-outline-primary mb-3">Main</a> 
     	<p>Total Incidents: {{ total_incidents }}</p>
 
     <form method="get" class="row g-3 mb-3">
