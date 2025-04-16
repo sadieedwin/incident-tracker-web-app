@@ -181,7 +181,7 @@ I configured **log rotation** for the incident tracker application logs located 
     
     notifempty # Don’t rotate empty logs 
     
-    create 0640 ubuntu adm # Create new logs with this permission and ownership
+    create 0640 ubuntu ubuntu # Create new logs with this permission and ownership
     
     }
 
@@ -215,6 +215,12 @@ tmux # Start a new session tmux attach # Reconnect to an existing session
 
 
 🔒 Protects long-running tasks and CLI work even if SSH drops.
+
+Additionally, created a ~/.ssh/config file.
+	Host *
+  	ServerAliveInterval 60
+  	ServerAliveCountMax 3
+
 
 ---
 
