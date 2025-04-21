@@ -1,0 +1,120 @@
+
+body {
+    background-color: #9ac0ec;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #a5a5b9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000055;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+a.btn,
+button,
+select,
+input[type="text"] {
+    background-color: #3c3c4e;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.btn:hover,
+button:hover {
+    background-color: #505067;
+}
+
+a.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+a.btn-outline-primary {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background: transparent;
+}
+
+a.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+th {
+    background-color: #3c3c4e;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a3a;
+}
+
+tr:hover {
+    background-color: #3c3c4e;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 12px;
+    background-color: #3c3c4e;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #505067;
+}
+
+.page-item.disabled span {
+    background-color: #555;
+    color: #aaa;
+}
+
