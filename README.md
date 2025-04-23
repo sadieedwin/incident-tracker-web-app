@@ -17,7 +17,7 @@ This project is designed to simulate a real enterprise environment for learning 
 - **Database**: MySQL (SQLite for local dev)
 - **Web Server**: NGINX
 - **OS**: Ubuntu (Linux)
-- **CI/CD**: GitHub Actions
+- **CI/CD**: GitHub Actions (plan)
 - **Cloud Hosting**: AWS EC2
 - **Monitoring**: Icinga, custom scripts
 
@@ -26,7 +26,7 @@ This project is designed to simulate a real enterprise environment for learning 
 ![image](https://github.com/user-attachments/assets/aa08eb00-9595-43cf-80cc-7e66a6ee3306)
 ---
 
-## Setup
+### Setup
 
 ☁️ EC2 Deployment (Basic Steps)
 - Launch Ubuntu EC2 on AWS
@@ -35,12 +35,16 @@ This project is designed to simulate a real enterprise environment for learning 
 - Clone repo
 - Run the app
 
-📚 What I Learned
+📚 **What I Learned**
+- Deploying an AWS EC2 instance
 - Deploying Flask on a real Linux server
 - Using NGINX as a reverse proxy
+- Some linux related tasks
 - Managing a web app with systemd
+- Log rotation
+- Cron job
 
-🧭 Future Improvements
+🧭 **Future Improvements**
 - Dockerize the app
 - Add user authentication
 - Migrate from SQLite to MySQL and maybe go to AWS RDS
