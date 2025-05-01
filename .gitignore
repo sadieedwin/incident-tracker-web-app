@@ -1,11 +1,11 @@
 # Ignore Python virtual environment
-#venv/
+venv/
 
 # Hide migrations
-#migrations/
+migrations/
 
 # Ignore __pycache__ folders
-#__pycache__/
+__pycache__/
 
 # Ignore db file
 #incidents.db
