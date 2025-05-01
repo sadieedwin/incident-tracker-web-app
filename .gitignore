@@ -8,4 +8,4 @@ migrations/
 __pycache__/
 
 # Ignore db file
-incidents.db
+#incidents.db
