@@ -1,4 +1,4 @@
-#!/home/ubuntu/incident-tracker-web-app/venv/bin/python3
+#!/home/ubuntu/incident-tracker-web-app/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
