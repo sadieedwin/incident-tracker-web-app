@@ -2,7 +2,11 @@
 
 I configured **log rotation** for the incident tracker application logs located at `/var/log/incident-tracker/incident_tracker.log`. This helps manage log file size and keeps logs organized.
 
-**Logrotate Config:**
+**Logrotate Config:** 
+```
+ubuntu@inci-track:~$ ll /etc/logrotate.d/incident_tracker
+-rw-r--r-- 1 root root 168 Apr 16 06:14 /etc/logrotate.d/incident_tracker
+```
 
     /var/log/incident-tracker/incident_tracker.log { 
 
