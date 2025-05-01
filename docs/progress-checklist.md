@@ -54,4 +54,4 @@
 ## 🧪 Fault Testing & Resilience (Planned)
 - [ ] Simulate app or DB crash
 - [ ] Observe and log error behavior
-- [ ] Restore from backup and verify recovery
+- [x] [Restore from backup and verify recovery ](https://github.com/sadieedwin/incident-tracker-web-app/blob/main/docs/restore-sqlite-db-from-backup.md)
