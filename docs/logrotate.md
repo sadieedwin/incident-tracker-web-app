@@ -31,8 +31,10 @@ ubuntu@inci-track:~$ ll /etc/logrotate.d/incident_tracker
 ✅ Validated that log rotation will keep the logs under control automatically.
 
 **app.py for logging:**
-import logging
+
 ```python
+import logging
+
 # Logging
 logging.basicConfig(
     filename='/var/log/incident-tracker/incident_tracker.log',
