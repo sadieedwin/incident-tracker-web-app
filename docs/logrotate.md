@@ -46,3 +46,5 @@ add route: app.logger.info(f"Incident created: Title='{title}', Priority={priori
 edit route: app.logger.info(f"Incident updated: ID={incident.id}, Title='{incident.title}', Priority={incident.priority}")
 delete route: app.logger.info(f"Incident deleted: ID={incident.id}, Title='{incident.title}'")
 ```
+### Encountered issue: 
+1. [docs/issues-encountered.md](https://github.com/sadieedwin/incident-tracker-web-app/blob/main/docs/issues-encountered.md#2-logrotate-config-issue)
