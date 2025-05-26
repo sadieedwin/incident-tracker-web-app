@@ -35,3 +35,21 @@ total 20
 | `-type f` | Only match files (not directories) |
 | `-mtime +7` | Only match files **older than 7 days** |
 | `-delete` | Permanently delete those matched files |
+
+---
+
+### Checked backup and it is running:
+```
+ubuntu@inci-track:~$ date
+Mon May 26 17:35:44 UTC 2025
+ubuntu@inci-track:~$
+ubuntu@inci-track:~$ ls -ltr incident-tracker-backups/
+total 180
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 18 02:00 db-2025-05-18.sql                                                                                             -rw-rw-r-- 1 ubuntu ubuntu 18752 May 19 02:00 db-2025-05-19.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 20 02:00 db-2025-05-20.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 21 02:00 db-2025-05-21.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 22 02:00 db-2025-05-22.sql                                                                                             -rw-rw-r-- 1 ubuntu ubuntu 18752 May 23 02:00 db-2025-05-23.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 24 02:00 db-2025-05-24.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 25 02:00 db-2025-05-25.sql
+-rw-rw-r-- 1 ubuntu ubuntu 18752 May 26 02:00 db-2025-05-26.sql
+```
