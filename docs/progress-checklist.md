@@ -30,6 +30,9 @@
 - [ ] Send alerts via email or Slack on critical issues
 - [ ] TO DO: refine monitors
 
+## Metrics
+- [x] Added the incident-tracker host to the Grafana server
+
 ## 🔐 Security Hardening (Planned)
 - [ ] Create a dedicated Linux user for running the app
 - [ ] Configure UFW firewall (allow only SSH + web)
